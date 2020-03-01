@@ -1,0 +1,25 @@
+<label>Server Name</label>
+<input type="text" (input)="onUpdateServerName($event)">
+
+<h1>server with ID {{ serverId }} {{getServiceStatus()}}</h1>
+<P>Port Value is :  {{portValue}} </P>
+<button class="btn btn-success" [disabled]="!allowAddingServer"
+ (click)="onCreateServer()">Click me</button>
+<br><br><br>
+
+ <p>{{ngModelTwoWayBinding}}</p>
+
+
+<br>
+<br>
+<br>
+
+<input type="text" (input)="onNewInputType($event)">
+<button (click)="onNewButtonClick()">Show Text</button>
+
+
+<input class="form-control" type="text"  [(ngModel)] = "ngModelTwoWayBinding">
+
+
+<p *ngIf="newInputOn">{{newInputText}}</p>
+
